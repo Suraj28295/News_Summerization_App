@@ -1,0 +1,50 @@
+<html> 
+	<head>
+		<meta news="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" type="text/css" href="../static/index.css"> 
+
+
+
+
+	</head>
+	
+	<body>
+    <center>
+        <h2>Text Summarization</h2>
+        <h3>Sumarize your news</h3>
+    </center>
+        <form class="grid" action="/check_the_summerization" method="POST">
+         
+          <label for="news">Enter you news:</label>
+          <input type="text" id="news" name="news">
+          <center><input class="file_submit" type="Submit"></center>
+
+          {% if summary_news %}
+            <center>
+              <h4 style="color: red;">Orignal News:-</h4>
+              <p style="color: goldenrod;" class="let_space">{{Orignal_news}}</p>
+              <br>
+              <h4 style="color: red;">Summarized News:-</h4>
+              <p style="color: blue;" class="let_space">{{summary_news}}</p>
+            </center> 
+
+          {% endif %}
+
+          
+
+        </form>
+
+        
+
+        
+
+        
+        <br>
+        <br>
+        <br>
+
+
+    </body>
+
+</html>
